@@ -1,0 +1,21 @@
+var gulp = require('gulp'),
+	path = require('path'),
+	compass = require('gulp-compass');
+
+gulp.task('compass', function(){
+	var filePath = 'client/public/';
+
+	return gulp.src('client/**/*.scss')
+		.pipe(compass({
+			image: path.join(__dirname, filePath, 'images'),
+			css: path.join(__dirname, filePath, 'css'),
+			sass: path.join(__dirname, filePath, 'sass'),
+			generated_images_path: path.join(__dirname, filePath, 'images')
+		}));
+});
+
+gulp.task('watch', function(){
+	gulp.watch('client/**/*.scss', ['compass']);
+});
+
+gulp.task('default', ['compass', 'watch']);
