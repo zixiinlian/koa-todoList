@@ -9,18 +9,18 @@ module.exports = React.createClass('todoItem', function(){
 			date: '',
 		}
 	},
-	componentDidMount: function(){
+	componentWillMount: function(){
 
 	},
 	delete: function(){
-
+		this.
 	},
 	render: function(){
 		return {
-			<div class="todo-item">
+			<div class="todo-item" ref="todoItem">
 				{input}
-				{this.state.content}
-				<div class="todo-date">{this.state.date}</div>
+				{this.props.content}
+				<div class="todo-date">{this.props.date}</div>
 				<a class="link-close" href="javascript:;" onClick="{this.delete}">删除</a>
 			</div>
 		}

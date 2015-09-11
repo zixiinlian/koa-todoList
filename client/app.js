@@ -1,4 +1,4 @@
 var React = require('react'),
-	todoList = require('./components/todoList.js');
+	todoList = require('./components/todoApp.js');
 
-React.render(<todoList />, document.body);
+React.render(<todoApp />, document.body);

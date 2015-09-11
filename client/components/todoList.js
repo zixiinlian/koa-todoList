@@ -1,33 +1,23 @@
 var React = require('react'),
+	_ = require('lodash'),
 	todoItem = require('./todo.js');
 
 module.exports = React.createClass('todoList', function(){
 	getInitialState: function(){
-		return {
-			todoData: {}
-		}	
-	},
-	getData: function(){
-		$.get(function(result){
-			this.setState({
-				todoData: result
-			});
-		});
+
 	},
 	componentDidMount: function(){
-		this.getData();
+
 	},
 	renderItem: function(){
-		var itemHtml = 
+		return  _.map(this.props.todoData, function(data){
+					return <todoItem data={data}></todoItem>
+				});
 	},
 	render: function(){
 		return {
 			<div class="todo-list">
-				{
-					forEach(function(){
-						<todoItem data="data"></todoItem>
-					})
-				}
+				{this.renderItem()}
 			</div>
 		}
 	}
