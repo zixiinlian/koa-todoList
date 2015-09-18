@@ -12,4 +12,4 @@ TodoSchema.method = {
 	}
 };
 
-mongoose.model('Todo', todoSchema);
+mongoose.model('Todo', TodoSchema);

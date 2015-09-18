@@ -1,0 +1,11 @@
+{% extends 'layout.swig' %}
+
+{% block content %}
+    {% parent %}
+    {{message}}
+    <form action="/login" method="POST">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -3,16 +3,16 @@ var mongoose = require('mongoose'),
 	Todo = mongoose.model('Todo');
 
 module.exports = function () {
-	list: function () {
+	// list: function () {
 
-	},
-	add: function () {
+	// },
+	// add: function () {
 
-	},
-	del: function () {
+	// },
+	// del: function () {
 
-	},
-	update: function () {
+	// },
+	// update: function () {
 
-	}
+	// }
 };
